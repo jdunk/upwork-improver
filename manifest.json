@@ -1,0 +1,40 @@
+{
+  "name": "Upwork Improver",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "Improve Upwork",
+  "homepage_url": "https://github.com/jdunk/upwork-improver",
+
+  "action": {
+    "default_icon": "icons/upwork-logo-348.png",
+    "default_title": "Upwork Improver"
+  },
+
+  "icons": {
+    "128": "icons/upwork-logo-348.png"
+  },
+
+  "commands": {
+  },
+
+  "background": {
+  },
+
+  "web_accessible_resources": [
+  ],
+
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["https://*.upwork.com/*"],
+    "js": ["content_script.js"]
+  }],
+
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "*://*.upwork.com/*"
+  ]
+}
